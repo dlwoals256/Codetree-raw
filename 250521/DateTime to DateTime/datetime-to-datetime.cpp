@@ -10,7 +10,7 @@ int main() {
     const int base = 11 + 11 * 60 + 11 * 24 * 60;
     const int inp = c + b * 60 + a * 24 * 60;
 
-    if (base >= inp) {
+    if (base > inp) {
         cout << -1;
     } else {
         cout << inp - base;
