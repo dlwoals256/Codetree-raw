@@ -7,7 +7,7 @@ int a, b, c, d;
 int main() {
     cin >> a >> b >> c >> d;
 
-    cout << 116;
+    cout << (c * 60 + d) - (a * 60 + b);
 
     return 0;
 }
