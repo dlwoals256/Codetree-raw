@@ -10,7 +10,12 @@ bool is_sequence(int* x, int* y) {
     for (int i = 0; i < n1; i++) {
         if (x[i] == y[0]) {
             for (int j = 0; j < n2; j++) {
-                if (x[i+j] != y[j]) res = false;
+                if (x[i+j] != y[j]) {
+                    res = false;
+                    break;
+                } else {
+                    res = true;
+                }
             }
         }
     }
