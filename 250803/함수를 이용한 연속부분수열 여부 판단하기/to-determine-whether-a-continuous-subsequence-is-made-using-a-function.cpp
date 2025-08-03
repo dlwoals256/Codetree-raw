@@ -10,9 +10,7 @@ bool is_sequence(int* x, int* y) {
     for (int i = 0; i < n1; i++) {
         if (x[i] == y[0]) {
             for (int j = 0; j < n2; j++) {
-                if (x[i+j] != y[j]) {
-                    break;
-                }
+                if (x[i+j] != y[j]) break;
                 if (j == n2 - 1) res = true;
             }
         }
@@ -28,7 +26,7 @@ int main() {
 
     for (int i = 0; i < n2; i++) cin >> b[i];
 
-    if (n1 > n2 && is_sequence(a, b)) {
+    if (n1 >= n2 && is_sequence(a, b)) {
         cout << "Yes";
     } else {
         cout << "No";
