@@ -6,16 +6,14 @@ int n1, n2;
 int a[100], b[100];
 
 bool is_sequence(int* x, int* y) {
-    int res = true;
+    int res = false;
     for (int i = 0; i < n1; i++) {
         if (x[i] == y[0]) {
             for (int j = 0; j < n2; j++) {
                 if (x[i+j] != y[j]) {
-                    res = false;
                     break;
-                } else {
-                    res = true;
                 }
+                if (j == n2 - 1) res = true;
             }
         }
     }
