@@ -30,7 +30,7 @@ int main() {
 
     for (int i = 0; i < n2; i++) cin >> b[i];
 
-    if (is_sequence(a, b)) {
+    if (n1 > n2 && is_sequence(a, b)) {
         cout << "Yes";
     } else {
         cout << "No";
