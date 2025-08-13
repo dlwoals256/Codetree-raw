@@ -4,6 +4,7 @@ using namespace std;
 
 int N;
 
+// 처음 풀이
 int task(int n, int cnt) {
     if (n <= 1) return cnt;
     int recur = n;
@@ -14,10 +15,19 @@ int task(int n, int cnt) {
     }
 }
 
+int task2(int n) {
+    if (n <= 1) return 0;
+    if (n % 2 == 0) {
+        return task2(n / 2) + 1;
+    } else {
+        return task2(n / 3) + 1;
+    }
+}
+
 int main() {
     cin >> N;
 
-    cout << task(N, 0);
+    cout << task2(N);
 
     return 0;
 }
