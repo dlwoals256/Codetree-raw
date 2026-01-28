@@ -34,7 +34,7 @@ for i in range(n):
     if i >= n-1:
         break
     for j in range(m):
-        if j >= n-1:
+        if j >= m-1:
             break
         res.append(block1([row[j:j+2] for row in grid[i:i+2]]))
 
@@ -42,7 +42,7 @@ for i in range(n):
     if i >= n-2:
         break
     for j in range(m):
-        if j >= n-2:
+        if j >= m-2:
             break
         res.append(block2([row[j:j+3] for row in grid[i:i+3]]))
 
