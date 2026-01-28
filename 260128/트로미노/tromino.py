@@ -7,7 +7,7 @@ def block1(arr):
     rotation3 = arr[0][1] + arr[1][0] + arr[1][1]
     rotation4 = arr[0][1] + arr[1][0] + arr[1][1]
 
-    return max(rotation1, rotation2, rotation3)
+    return max(rotation1, rotation2, rotation3, rotation4)
 
 def transpose(arr):
     res = []
