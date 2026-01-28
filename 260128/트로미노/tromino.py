@@ -5,7 +5,7 @@ def block1(arr):
     rotation1 = arr[0][0] + arr[1][0] + arr[1][1]
     rotation2 = arr[0][0] + arr[0][1] + arr[1][0]
     rotation3 = arr[0][1] + arr[1][0] + arr[1][1]
-    rotation4 = arr[0][1] + arr[1][0] + arr[1][1]
+    rotation4 = arr[0][0] + arr[0][1] + arr[1][1]
 
     return max(rotation1, rotation2, rotation3, rotation4)
 
