@@ -20,6 +20,6 @@ else:
                 visited[curr_node] = True
                 dfs(curr_node)
 
-    dfs(1)
+    dfs(0)
 
     print(cnt-1)
