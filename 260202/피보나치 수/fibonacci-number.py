@@ -2,7 +2,7 @@ N = int(input())
 
 # Please write your code here.
 
-dp = [0] * 45
+dp = [0] * 50
 
 def fibo(n):
     if dp[n] != 0:
