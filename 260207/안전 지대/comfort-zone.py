@@ -7,7 +7,6 @@ grid = [list(map(int, input().split())) for _ in range(n)]
 
 top_height = max(max(grid))
 ks = []
-areas = [[i, 0] for i in range(top_height)]
 
 visited = [[False for _ in range(m)] for _ in range(n)]
 
@@ -28,13 +27,18 @@ def dfs(x, y, k):
             visited[nx][ny] = True
             dfs(nx, ny, k)
 
-for k in range(1, top_height):
+best_k = 1
+max_areas = 0
+for k in range(1, top_height+1):
+    current_areas = 0
     visited = [[False for _ in range(m)] for _ in range(n)]
     for i in range(n):
         for j in range(m):
             if grid[i][j] > k and not visited[i][j]:
                 dfs(i, j, k)
-                areas[k][1] += 1
+                current_areas += 1
+    if current_areas > max_areas:
+        max_areas = current_areas
+        best_k = k
 
-areas.sort(key=lambda x: x[1])
-print(areas[-1][0], areas[-1][1])
+print(best_k, max_areas)
